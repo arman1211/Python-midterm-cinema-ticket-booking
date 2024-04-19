@@ -67,14 +67,18 @@ class Hall(Star_Cinema):
             for j in range(0,self.cols):
                 if(self.__seats[id][i][j] == 0):
                     flag = True
-                    print(f"{i} {j}")
+                    print(f"[{i},{j}]",end=' ')
+                else:
+                    print(f'[ X ]',end=' ')
+            print('\n')
         if flag:
-            print('\n\tthese seats are available. The result are shown in row and column')
+            print('\n\tthese seats are available.The result are shown in [row,col] format')
+            print('\n\t [ X ] means this sit is booked')
         else:
             print('\n\tno seats are available right now')
 
 
-my_cinema = Hall(20,20,1)
+my_cinema = Hall(8,8,1)
 
 run = True
 
